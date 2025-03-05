@@ -8,15 +8,19 @@ import org.openqa.selenium.WebDriver.Window;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ManageMethods {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 
+		driver.get("https://www.instagram.com/");
 		
 		Options opt = driver.manage();
 		Window win = opt.window();
+		Thread.sleep(1000);
 		win.minimize();
+		Thread.sleep(1000);
 		win.maximize();
+		Thread.sleep(1000);
 		win.fullscreen();
 
 		Dimension dim1 = win.getSize();
@@ -27,6 +31,7 @@ public class ManageMethods {
 		
 		Dimension dim2 = new Dimension(700, 250);
 		
+		Thread.sleep(1000);
 		win.setSize(dim2);
 		
 		Point pt1 = win.getPosition();
@@ -35,7 +40,8 @@ public class ManageMethods {
 		System.out.println("x : " + x);
 		System.out.println("y : " + y);
 		
-		Point pt2 = new Point(100, 100);
-		
+		Thread.sleep(1000);
+		Point pt2 = new Point(1000, 500);
+		win.setPosition(pt2);
 	}
 }
