@@ -1,4 +1,4 @@
-package webdriver_methods;
+package wd_methods;
 
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;

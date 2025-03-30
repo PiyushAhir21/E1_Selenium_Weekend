@@ -1,4 +1,4 @@
-package webdriver_methods;
+package wd_methods;
 
 import java.util.Set;
 
