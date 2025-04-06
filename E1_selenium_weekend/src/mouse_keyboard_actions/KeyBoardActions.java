@@ -23,14 +23,13 @@ public class KeyBoardActions {
 		Thread.sleep(1000);
 		act.keyDown(Keys.TAB).build().perform();
 		act.keyUp(Keys.TAB).build().perform();
-		
+
 		act.sendKeys("password").build().perform();
 		Thread.sleep(1000);
 		act.keyDown(Keys.ENTER).build().perform();
 		act.keyUp(Keys.ENTER).build().perform();
-		
-		
-		
+
 		Thread.sleep(3000);
+		driver.close();
 	}
 }
